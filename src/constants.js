@@ -16,3 +16,17 @@ export const WEIGHTS = {
   medium: 600,
   bold: 800,
 };
+
+export const BREAKPOINTS = {
+  phone: 600,
+  tablet: 950,
+  laptop: 1300,
+}
+
+const toRem = px => (px / 16).toFixed(3)
+
+export const QUERIES = {
+  phoneAndDown: `(max-width: ${toRem(BREAKPOINTS.phone)}rem)`,
+  tabletAndDown: `(max-width: ${toRem(BREAKPOINTS.tablet)}rem)`,
+  laptopAndDown: `(max-width: ${toRem(BREAKPOINTS.laptop)}rem)`,
+}
